@@ -13,7 +13,7 @@ public class Lucky extends JavaPlugin {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(listener, this);
-        
+
         File cfile = new File(getDataFolder(), "config.yml");
         if(!cfile.exists()) {
             getConfig().options().copyDefaults(true);
