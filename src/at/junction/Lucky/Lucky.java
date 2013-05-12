@@ -1,12 +1,14 @@
 package at.junction.Lucky;
 
 import java.io.File;
+import java.util.HashMap;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Lucky extends JavaPlugin {
     LuckyListener listener = new LuckyListener(this);
     Configuration config = new Configuration(this);
+    public HashMap<String, Integer> playerDeaths = new HashMap<>();
 
     @Override
     public void onEnable() {
