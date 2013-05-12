@@ -1,6 +1,6 @@
 max-deaths: 3
 safe-spawn:
-	world: world
-	x: 0
-	y: 100
-	z: 0
+    world: world
+    x: 0
+    y: 100
+    z: 0
