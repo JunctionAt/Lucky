@@ -17,6 +17,6 @@ public class Configuration {
         FileConfiguration config = plugin.getConfig();
         
         maxDeaths = config.getInt("max-deaths", 3);
-        safeSpawn = new Location(plugin.getServer().getWorld(config.getString("safespawn.world")), config.getDouble("safespawn.x"), config.getDouble("safespawn.y"), config.getDouble("safespawn.z"));
+        safeSpawn = new Location(plugin.getServer().getWorld(config.getString("safe-spawn.world")), config.getDouble("safe-spawn.x"), config.getDouble("safe-spawn.y"), config.getDouble("safe-spawn.z"));
     }
 }

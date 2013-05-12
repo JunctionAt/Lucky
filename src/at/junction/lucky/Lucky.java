@@ -19,7 +19,7 @@ public class Lucky extends JavaPlugin {
             getConfig().options().copyDefaults(true);
             saveConfig();
         }
-        
+
         config.load();
     }
 }
