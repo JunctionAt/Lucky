@@ -1,4 +1,4 @@
-package at.junction.Lucky;
+package at.junction.lucky;
 
 import java.io.File;
 import java.util.HashMap;

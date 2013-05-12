@@ -1,4 +1,4 @@
-package at.junction.Lucky;
+package at.junction.lucky;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
