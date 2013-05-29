@@ -16,15 +16,16 @@ public class LuckyListener implements Listener {
     }
 
     @EventHandler
-    public void onEntityDeath(EntityDeathEvent event) {
-        if(event.getEntity() instanceof Player && event.getEntity().getKiller() instanceof Player) {
-            Player p = (Player)event.getEntity();
-            if(plugin.playerDeaths.get(p.getName()) == null) {
-                plugin.playerDeaths.put(p.getName(), 1);
-            } else {
-                plugin.playerDeaths.put(p.getName(), plugin.playerDeaths.get(p.getName()) + 1);
+    public void onPlayerDeath(PlayerDeathEvent event) {
+        Player p = (Player)event.getEntity();
+        if(p.getKiller() instanceof Player) {
+            if(p.getBedSpawnLocation().getChunk() == p.getLocation().getChunk()){
+                if(plugin.playerDeaths.get(p.getName()) == null) {
+                    plugin.playerDeaths.put(p.getName(), 1);
+                } else {
+                    plugin.playerDeaths.put(p.getName(), plugin.playerDeaths.get(p.getName()) + 1);
+                }
             }
-            p.sendMessage(plugin.playerDeaths.get(p.getName()).toString());
         }
     }
 
